@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Table</title>
-        <link rel="stylesheet" href="mobile.css">
+        <link rel="stylesheet" href="table.css">
     </head>
 
     <body>
@@ -15,93 +15,84 @@
         </header>
 
         <main>
-            <table border="1">
-                <caption>My class schedule for 2026-2027</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Department</th>
-                        <th scope="col">Course Number</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Location</th>
-                        <th scope="col">Time</th>
-                        <th scope="col">Credits</th>
+            <div class="tablediv">
+                <table id="schedule">
+                    <caption>My class schedule for 2026-2027</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Department</th>
+                            <th scope="col">Course Number</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Credits</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="rowgroup" colspan="6">Fall 2026</th>
+                        </tr>
+                        <tr>
+                            <td>CS</td>
+                            <td>140</td>
+                            <td>Web Design</td>
+                            <td>P2</td>
+                            <td>11AM</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>IT</td>
+                            <td>280</td>
+                            <td>Network</td>
+                            <td>P3</td>
+                            <td>12PM</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>IT</td>
+                            <td>281</td>
+                            <td>Cybersecurity</td>
+                            <td>P1</td>
+                            <td>3PM</td>
+                            <td>3</td>
+                        </tr>
+                        
+                    </tbody>
+                    <tbody>
+                    <tr>    
+                        <th scope="rowgroup" colspan="6">Winter 2027</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="rowgroup" colspan="6">Fall 2026</th>
-                    </tr>
-                    <tr>
-                        <td>CS</td>
-                        <td>140</td>
-                        <td>Web Design</td>
-                        <td>P2</td>
-                        <td>11AM</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>280</td>
-                        <td>Network</td>
-                        <td>P3</td>
-                        <td>12PM</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>IT</td>
-                        <td>281</td>
-                        <td>Cybersecurity</td>
-                        <td>P1</td>
-                        <td>3PM</td>
-                        <td>3</td>
-                    </tr>
-                    
-                </tbody>
-                <tbody>
-                <tr>    
-                    <th scope="rowgroup" colspan="6">Winter 2027</th>
-                </tr>
-                    <tr>
-                        <td rowspan="3">IT</td>
-                        <td>480</td>
-                        <td>Computer Network Design</td>
-                        <td>P3</td>
-                        <td>10AM</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>482</td>
-                        <td>Ethical Hacking</td>
-                        <td>P1</td>
-                        <td>1PM</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>327</td>
-                        <td>Server Administration</td>
-                        <td>P2</td>
-                        <td>9AM</td>
-                        <td>3</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th scope="row" colspan="5">Total Credit</th>
-                        <td>18</td>
-                    </tr>
-                </tfoot>
-            </table>
-            <br>
-            <h2>1. When do you use a table?</h2>
-            <p>Dipsplay structured data in row and column.</p>
-            <h2>2. When do you not use a table?</h2>
-            <p>Should not use a table just to design a website layout or arrange element. Insteadm I can use CSS Flex and Grid.</p>
-            <h2>3. When do you need to do extra work for table accessibility?</h2>
-            <p>When a table becomes more complex. When a web go public. I don't want to get sue.</p>
-            <h2>4. Which question you asked AI today helped you learn the most, and why?</h2>
-            <p>rowspan, because I have never leanrned before.</p>
-            <h2>5. Did AI ever try to give you more than you asked for, like writing your code? What did you do?</h2>
-            <p>Yes, I learned the concept, but write my own code.</p>
+                        <tr>
+                            <td rowspan="3">IT</td>
+                            <td>480</td>
+                            <td>Computer Network Design</td>
+                            <td>P3</td>
+                            <td>10AM</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>482</td>
+                            <td>Ethical Hacking</td>
+                            <td>P1</td>
+                            <td>1PM</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>327</td>
+                            <td>Server Administration</td>
+                            <td>P2</td>
+                            <td>9AM</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="5">Total Credit</th>
+                            <td>18</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            <div></div>     
         </main>
         <footer><p>&copy;2026 Kevin Yang</p></footer>
     </body>

@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tablediv {
+    overflow-x: auto;
+}
+
+#schedule {
+    border: 1px solid black;
+}
+
+
+/* th {
+    border: 1px solid black;
+} */
+/* 
+td {
+    border: 1px solid black;
+} */
+
+#schedule th, #schedule td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 10px;
+}
+
+/* #schedule th {
+    background-color: navy;
+    color:white
+} */
+
+#schedule tbody th, #schedule thead th {
+    background-color: navy;
+    color : white
+
+}
+
+td {
+    vertical-align: middle;
+}
+
+/* #schedule tbody th:nth-child(2) {
+    background-color: aliceblue;
+} */
+
+#schedule tbody tr:nth-child(even){
+    background-color: aqua;
+}
+
+
+#schedule tbody td:nth-child(3) {
+    color: red;
+}
+
+#schedule tbody tr td:last-child{
+    text-align: right;
+}
