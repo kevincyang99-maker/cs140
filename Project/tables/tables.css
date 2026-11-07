@@ -47,7 +47,8 @@ main {
 }
 
 #skill {
-    border: 1px solid black
+    border: 1px solid black;
+    width:90%
 }
 
 #skill th, #skill td {
