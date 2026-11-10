@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <header>
+            <h1>Kevin Web Design on Form</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Page1</a>
+            <a href="#">Page2</a>
+        </nav>
+        <main>
+            <form action="formprocessing.html" method="post">
+                <div class="form-row">
+                    <label for="personname">Full Name</label>
+                    <input id="personname" type="text" name="fullname" placeholder="Full Name">
+                </div>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" name="email" placeholder="Email">
+                </div>
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="pass" placeholder="Password">
+                </div>
+                <div class="form-row">
+                    <label for="state">State</label>
+                    <select name="state" id="state">
+                        <option value="blank">------</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="UT">Utah</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="form-row">
+                    <input type="checkbox" id="excel" name="skill" value="excel">
+                    <label for="excel">Excel</label>
+
+                    <input type="checkbox" id="power_bi" name="skill" value="power_bi">
+                    <label for="power_bi">Power BI</label>
+
+                    <input type="checkbox" id="python" name="skill" value="python">
+                    <label for="python">Python</label>
+                </div>
+                <div class="form-row">
+                    <label for="reason">Why do you want to join?</label>
+                    <textarea id="reason" name="reason"
+                    rows="4" cols="40"
+                    placeholder="Tell us about yourself..."></textarea>
+                </div>
+                <div class="form-row">
+                    <input type="submit" value="Sign Up">
+                </div>
+            </form>
+            <p>Action tells the browser where to send the form. </p>
+            <p>Method tells the browser which HTTP method to use when sending data.</p>
+            <p>get put data in url post send in a different way if we are chainging something on server we use post. </p>
+            <p>A pre-set value is actual data already filled in, while a placeholder is only a hint for the user. Text box: Use value for a pre-set value and placeholder for a hint. Textarea: Put the pre-set text between textarea> and /textarea. Use placeholder for a hint. Select box: Use selected on an option to choose the default value. A select box does not have a placeholder attribute, but we can use an empty option as a hint. Checkbox: Use checked to make it selected by default. The value attribute determines what data is submitted. It does not have a placeholder. Radio button: Use checked to select a default option. The value attribute determines what data is submitted. It does not have a placeholder.</p>
+            <p>HTML5 introduced new input types, including email, url, tel, search, number, range, date, time, datetime-local, month, week, and color. It also introduced datetime, which is now obsolete. Other new form-related elements include datalist, output, progress, and meter. In my current form, I have not used any of the new HTML5 input types. I used text, password, radio, checkbox, and submit, which existed before HTML5. I also used select and textarea, which are older HTML elements.</p>
+        </main>
+        <footer>
+            &copy;2026 Kevin Yang
+        </footer>
+    </body>
+</html>
+
