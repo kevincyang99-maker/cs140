@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <header>
+            <h1>Game Account Sign Up</h1>
+        </header>
+        <main>
+            <form action="formprocess.html" method="post">
+                <fieldset>
+                    <legend>Information</legend>
+                    <div class="form-row">
+                        <label for="participant">Full Name</label>
+                        <input id="participant" type="text" name="participant" placeholder="Full Name">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="number" name="phone" placeholder="Phone number">
+                    </div>
+                    <div class="form-row">
+                        <label for="bday">Birthday</label>
+                        <input id="bday" type="date" name="bday">
+                    </div>
+                    <div class="form-row">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" name="pass" placeholder="Password">                        
+                    </div>
+                    <div class="form-row">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="blamk">-----</option>
+                            <option value="TW">Taiwan</option>
+                            <option value="USA">United States</option>
+                            <option value="JP">Japan</option>
+                            <option value="CA">Canada</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="space">Gender</div>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                        
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="space"></div>
+                        <input type="checkbox" id="age"  name="age" value="yes">
+                        <label for="age"> I am 15 or above.</label>
+                    </div>
+                    <div class="form-row">
+                        <label for="channel">Survey</label>
+                        <textarea id="channel" name="channel" placeholder="Ex: How did you know us?"></textarea>
+                        
+                    </div>
+                    <div class="form-row">
+                        <div class="space"></div>
+                        <input type="submit" value="Sigh Up">
+                    </div>
+
+
+                    </fieldset>
+            </form>
+        </main>
+
+
+
+    </body>
+</html>
