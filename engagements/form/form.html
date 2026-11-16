@@ -16,19 +16,19 @@
             <a href="#">Page2</a>
         </nav>
         <main>
-            <form action="formprocessing.html" method="post">
+            <form action="formprocessing.html" method="post" id="myForm">
                 <fieldset>
                     <legend>Account</legend>
                     <div class="form-row">
-                        <label for="personname">Full Name</label>
-                        <input id="personname" type="text" name="fullname" placeholder="Full Name">
+                        <label for="fullname">Full Name</label>
+                        <input id="fullname" type="text" name="fullname" placeholder="Full Name">
                     </div>
                     <div class="form-row">
                         <label for="email">Email</label>
                         <input id="email" type="email" name="email" placeholder="Email">
                     </div>
                     <div class="form-row">
-                        <label for="bdate">Birtherday</label>
+                        <label for="bdate">Birthday</label>
                         <input id="bdate" type="date" name="bdate" placeholder="Birthday">
                     </div>
                     <div class="form-row">
@@ -66,11 +66,55 @@
                     </div>
                 </fieldset>
             </form>
-            
+            <br>
+            <p>   
+                1. What is JavaScript? How did it get its name?  A program language like python. make web more interactive modify page. It was renamed JavaScript partly to capitalize on Java's popularity, but they are different languages.
+            </p>
+            <p>    
+                2. What are the two ways you can run JavaScript? usually run inside a browser and nodejs(non browser language)
+            </p>
+            <p>
+                3. What is jQuery? Is it still popular today? 	A JavaScript library that simplifies DOM manipulation, events, and AJAX. It is still used, especially on older websites.
+            </p>
+            <p>
+                4. What is the most popular front-end js library today? React is one of the most widely used front-end libraries.
+            </p>
+            <p>
+                5. How does your code prevent the form from being submitted? Why do we need to prevent it? event.preventDefault() stops the browser's default form submission.
+            </p>
         </main>
         <footer>
             &copy;2026 Kevin Yang
         </footer>
+        <script>
+            document.getElementById('myForm').addEventListener('submit',function(event) {
+                event.preventDefault();
+                alert("Form Submitted");
+
+                const fullname = document.getElementById('fullname').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const age = document.getElementById('bdate').value;
+
+                if (!fullname || !email){
+                    alert("You need a name and email");
+                    return;
+                }
+
+                if (!age || age<18){
+                    alert("You need to be 18!");
+                }
+
+                const formDate = {
+                    name: fullname,
+                    email:email,
+                    password: password,
+                    age: age
+                }
+                console.log(formDate);
+            })
+        </script>
     </body>
 </html>
+
 
