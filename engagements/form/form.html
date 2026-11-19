@@ -28,6 +28,10 @@
                         <input id="email" type="email" name="email" placeholder="Email">
                     </div>
                     <div class="form-row">
+                        <label for="age">Age</label>
+                        <input id="age" type="number" name="age" placeholder="Age">
+                    </div>
+                    <div class="form-row">
                         <label for="bdate">Birthday</label>
                         <input id="bdate" type="date" name="bdate" placeholder="Birthday">
                     </div>
@@ -66,22 +70,21 @@
                     </div>
                 </fieldset>
             </form>
+            <p id="message"></p>
             <br>
             <p>   
-                1. What is JavaScript? How did it get its name?  A program language like python. make web more interactive modify page. It was renamed JavaScript partly to capitalize on Java's popularity, but they are different languages.
+                AJAX stands for Asynchronous JavaScript and XML. It allows a website to send and receive data from a server without reloading the entire page. AJAX can also work with JSON instead of XML.
             </p>
             <p>    
-                2. What are the two ways you can run JavaScript? usually run inside a browser and nodejs(non browser language)
+                2. It makes the code cleaner, easier to manage, and easier to debug.
             </p>
             <p>
-                3. What is jQuery? Is it still popular today? 	A JavaScript library that simplifies DOM manipulation, events, and AJAX. It is still used, especially on older websites.
+                3. Right-click and select Inspect, then open the Console tab. It shows errors and their line numbers.
             </p>
             <p>
-                4. What is the most popular front-end js library today? React is one of the most widely used front-end libraries.
+                4. Most IDs match. My IDs are myForm, fullname, email, age, bdate, password, state, male, female, remember, and reason. I found some JavaScript errors and am fixing them.
             </p>
-            <p>
-                5. How does your code prevent the form from being submitted? Why do we need to prevent it? event.preventDefault() stops the browser's default form submission.
-            </p>
+        
         </main>
         <footer>
             &copy;2026 Kevin Yang
@@ -109,9 +112,25 @@
                     name: fullname,
                     email:email,
                     password: password,
-                    age: age
+                    remember:document.getElementById('remember').checked,
+                    state:document.getElementById('state').value,
+                    birthday:document.getElementById('bdate').value,
+                    age: document.getElementById('age').value
                 }
                 console.log(formDate);
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET","submit.json",true);
+                xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8")
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        message = document.getElementById('message');
+                        const response = JSON.parse(xhr.responseText);
+                        message.textContent = reason.message;
+                        form = document.getElementById('myform');
+                        form.reset();
+                    } else if (xhr.readyState === 4) {
+                        alert('Error submitting form.');                    }
+                }
             })
         </script>
     </body>
